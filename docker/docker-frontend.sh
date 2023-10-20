@@ -36,8 +36,7 @@ apt update
 apt install -y chromium
 
 cd /app/superset-frontend
-npm config set user 0
-npm config set unsafe-perm true
+rm -rf node_modules
 npm install -f --no-optional --global webpack webpack-cli
 npm install
 
