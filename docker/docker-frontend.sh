@@ -16,6 +16,20 @@
 # limitations under the License.
 #
 set -e
+function show_waiting_animation() {
+    local delay= 7# Delay in seconds between dots
+    local iterations=2 # Number of iterations for the animation
+
+    echo -n "Waiting"
+    for ((i = 0; i < iterations; i++)); do
+        sleep $delay
+        echo -n "."
+    done
+    echo " Done!"
+}
+
+# Call the function to display the waiting animation
+show_waiting_animation
 
 # Packages needed for puppeteer:
 apt update
