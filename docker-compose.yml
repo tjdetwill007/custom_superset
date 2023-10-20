@@ -22,7 +22,6 @@ services:
       - superset
     volumes: 
       - ./docker:/app/docker
-      - ./superset-frontend:/app/superset-frontend
       - superset_vol:/app/superset
 volumes:
   superset_vol:
