@@ -14,6 +14,7 @@ services:
         - '8088:8088'
       volumes:
         - superset_vol_test:/app
+        - ./superset-frontend:/app/superset-frontend
   superset-node:
     image: node:16
     container_name: superset_node
@@ -21,7 +22,9 @@ services:
     depends_on: 
       - superset
     volumes: 
+      - superset_vol_test:/app
       - ./docker:/app/docker
-      - superset_vol_test:/app/superset
+      - ./superset-frontend:/app/superset-frontend
+      
 volumes:
   superset_vol_test:
