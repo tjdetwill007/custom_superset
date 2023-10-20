@@ -15,7 +15,7 @@ services:
       user: root
       volumes:
         - superset_vol_test:/app
-        # - ./superset-frontend:/app/superset-frontend
+        - ./superset-frontend:/app/superset-frontend
   superset-node:
     image: node:16
     container_name: superset_node
