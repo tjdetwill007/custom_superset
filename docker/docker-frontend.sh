@@ -17,7 +17,7 @@
 #
 set -e
 function show_waiting_animation() {
-    local delay= 7# Delay in seconds between dots
+    local delay= 7 # Delay in seconds between dots
     local iterations=2 # Number of iterations for the animation
 
     echo -n "Waiting"
