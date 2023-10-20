@@ -12,6 +12,7 @@ services:
         - ADMIN_PASSWORD=admin
       ports:
         - '8088:8088'
+      user: root
       volumes:
         - superset_vol_test:/app
         # - ./superset-frontend:/app/superset-frontend
