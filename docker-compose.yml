@@ -13,7 +13,7 @@ services:
       ports:
         - '8088:8088'
       volumes:
-        - superset_vol:/app/superset
+        - superset_vol_test:/app/superset
   superset-node:
     image: node:16
     container_name: superset_node
@@ -22,6 +22,6 @@ services:
       - superset
     volumes: 
       - ./docker:/app/docker
-      - superset_vol:/app/superset
+      - superset_vol_test:/app/superset
 volumes:
-  superset_vol:
+  superset_vol_test:
