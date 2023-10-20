@@ -16,7 +16,6 @@ services:
     image: node:16
     container_name: superset_node
     command: ["/app/docker/docker-frontend.sh"]
-    env_file: docker/.env
     depends_on: 
       - superset
     volumes: 
