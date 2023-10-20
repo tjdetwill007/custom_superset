@@ -12,3 +12,12 @@ services:
         - ADMIN_PASSWORD=admin
       ports:
         - '8088:8088'
+  superset-node:
+    image: node:16
+    container_name: superset_node
+    command: ["/app/docker/docker-frontend.sh"]
+    env_file: docker/.env
+    depends_on: superset
+    volumes: 
+      - ./docker:/app/docker
+      - ./superset-frontend:/app/superset-frontend

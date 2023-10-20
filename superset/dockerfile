@@ -14,4 +14,4 @@ COPY superset_config.py /app/
 ENV SUPERSET_CONFIG_PATH /app/superset_config.py
 
 USER superset
-ENTRYPOINT [ "/superset-init.sh" ]
+ENTRYPOINT [ "sh","/superset-init.sh" ]
