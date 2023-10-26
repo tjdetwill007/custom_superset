@@ -1,3 +1,4 @@
+
 version: '3'
 
 services:
@@ -20,12 +21,12 @@ services:
     image: node:16
     container_name: superset_node
     command: ["/app/docker/docker-frontend.sh"]
-    depends_on: 
+    depends_on:
       - superset
-    volumes: 
+    volumes:
       - superset_vol_test:/app
       - ./docker:/app/docker
-      # - ./superset-frontend:/app/superset-frontend
-      
+      - ./superset-frontend:/app/superset-frontend
+
 volumes:
   superset_vol_test:
