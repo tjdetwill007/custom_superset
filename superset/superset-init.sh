@@ -10,5 +10,7 @@ superset db upgrade
 # setup roles and permissions
 superset superset init 
 
+superset load_examples --force
+
 # Starting server
 /bin/sh -c /usr/bin/run-server.sh
