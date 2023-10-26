@@ -35,8 +35,10 @@ show_waiting_animation
 apt update
 apt install -y chromium
 
+chmod -R 777 /root
 cd /app/superset-frontend
 rm -rf node_modules
+
 npm install -f --no-optional --global webpack webpack-cli
 npm install
 
